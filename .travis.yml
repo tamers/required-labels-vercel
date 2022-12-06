@@ -1,0 +1,15 @@
+language: python
+python:
+- 3.6
+branches:
+  only:
+    - master
+script:
+- python -m unittest -v
+deploy:
+  provider: heroku
+  api_key:
+    secure: E0UMzmsgANV/XKCABbcm34/H9xgfSbI2GKczxgrGr3iuw7f/IC9hhVRUHVZICg+04HUJs4PPdFuwjZ26bx58C/RHqBTmIcrSmz79gXS9YvKcjhOoAQX1Su+s7QIepQcqQDWm/zahI+sy9rLsOjVPQY2IlovhExTufagV0ggqK5GLl4mXX8BttTNLIcKjIfnihxP1DcrjSenB2caj9zhAORMbpQJf3CT5G5kd9VSyDGCI9sSnYhCpKSbkN7VPqHs6KTJsRhWsJRR9CjTbH7WOycqy8k4hz/4/HnjjIe9qQQj+xEt/11n/dKxWc3leMIeqlq53i5t9yKVehGUYCkQbgYeYve5uenHZ7k6KUcC/HiV2tHk/UiRNKjuKLzD4fexH1l87FWgqoG1WzlCJ390xrDvioSqcXlM+2IfAuKMsE+PDrz5Wlsi83wrcDdyP8cVkBt+dlN0yVhgK7V690ljaMm86ljPOJkPS69WVSFQBercjBoyXDnn8MvaAW0UaJ9BVlF4lISBq5HCEN0c5gaqdeMgFlcMPSiqPYiAWSJbJHaInU/bsGxJ56uJWnI+3hued9NhOP83LkuSWVzyfzIqEyAc/MBGRCEW7+MlaBOPbSVED/ncTZgYEpd0jcZLDEoAefxde5vMT83lejXelInLyFCX5uSNoRWIRdVXl+HP8JhA=
+  app: required-labels
+  on:
+    repo: dimagi/required-labels
